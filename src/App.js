@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Link,useRoutes} from 'react-router-dom'
+import {routes} from './routes'
+import { Button } from 'antd-mobile'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+  const element = useRoutes(routes)
+    return (
+      <div>
+        <Button color= 'primary'>Login</Button>
+        <Link to="/home">主頁</Link>
+        <Link to="/citylist">城市選擇</Link>
+        {element}
+      </div>
+    )
 }
-
-export default App;

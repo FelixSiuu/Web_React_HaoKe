@@ -1,9 +1,21 @@
-html,body{
-  height: 100%;
+html,
+body {
   color: #333;
-  background-color: #fff;
+  background-color: white;
   font-family: 'Microsoft YaHei';
 }
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+html,
+body,
+#root,
+.App {
+  height: 100%;
 }

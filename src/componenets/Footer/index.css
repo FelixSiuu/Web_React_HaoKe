@@ -1,0 +1,24 @@
+.tabBar {
+  width: 100%;
+  padding: 5px 0;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+.tabBar .tabItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tabBar .tabItem a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+.tabBar .myNavLink {
+  color: teal !important;
+}

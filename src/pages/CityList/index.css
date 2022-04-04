@@ -1,0 +1,36 @@
+.cityList .cityList_elevator {
+  position: fixed;
+  top: 10%;
+  right: 10px;
+  width: 20px;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cityList .cityList_elevator > a {
+  display: block;
+  width: 100%;
+  color: #333;
+  text-align: center;
+  border-radius: 10px;
+}
+.cityList .cityList_elevator .myNavLink {
+  background-color: teal;
+  color: white;
+}
+.cityList .cityList_main {
+  padding: 10px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.cityList .cityList_main .cityList_main_head {
+  margin-bottom: 10px;
+}
+.cityList .cityList_main .cityList_main_item {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.cityList .cityList_main .cityList_hot {
+  color: red;
+  font-Weight: 700;
+}

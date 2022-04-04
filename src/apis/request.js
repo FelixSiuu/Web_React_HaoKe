@@ -37,3 +37,12 @@ export const requestCityList = function(level){
 export const requestHotCity = function(){
   return axios.get('http://localhost:8080/area/hot')
 }
+
+// map house info
+export const requestMapHouse = function(id){
+  return axios.get('http://localhost:8080/area/map',{
+    params:{
+      id
+    }
+  })
+}

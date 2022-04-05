@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
+import HouseListContainer from '../../componenets/HouseListContainer'
 import Footer from '../../componenets/Footer'
 
-export default class HouseList extends Component {
-  render() {
-    return (
-      <div>HouseList
-        <Footer/>
-      </div>
-    )
-  }
+export default function HouseList() {
+  return (
+    <div>
+      <HouseListContainer />
+      <Footer />
+    </div>
+  )
 }

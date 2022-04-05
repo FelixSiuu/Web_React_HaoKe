@@ -1,0 +1,6 @@
+.houseList_map {
+  position: fixed;
+  bottom: 0;
+  transition: all 0.2s ease-out;
+  overflow: auto;
+}

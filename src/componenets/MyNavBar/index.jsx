@@ -7,7 +7,7 @@ export default function MyNavBar(props) {
   // return to the last page
   const navigate = useNavigate()
   function back(){
-    navigate('/home')
+    navigate(-1)
   }
   
   return (

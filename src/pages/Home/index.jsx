@@ -15,7 +15,7 @@ import { requestGroup } from '../../apis/request.js'
 // get news
 import { requestNews } from '../../apis/request.js'
 import { connect } from 'react-redux'
-import { getCityAction } from '../../redux/actions/map.js'
+import { getCityAction } from '../../redux/actions/'
 
 export default connect(
   state => ({

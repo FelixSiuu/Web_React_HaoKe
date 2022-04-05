@@ -46,3 +46,8 @@ export const requestMapHouse = function(id){
     }
   })
 }
+
+// house list
+export const requestHouseList = function(cityId){
+  return axios.get(`http://localhost:8080/houses?cityId=${cityId}`)
+}

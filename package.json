@@ -50,6 +50,7 @@
     "react-router-dom": "^6.2.2",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
+    "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",

@@ -2,7 +2,7 @@ import React from 'react'
 import {useNavigate} from 'react-router-dom'
 import { UserCircleOutline,SearchOutline } from 'antd-mobile-icons'
 import { connect } from 'react-redux'
-import { getCityAction } from '../../redux/actions/map.js'
+import { getCityAction } from '../../redux/actions'
 import './index.css'
 
 export default connect(

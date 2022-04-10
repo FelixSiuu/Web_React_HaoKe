@@ -1,0 +1,88 @@
+.houseDetail {
+  height: 100%;
+}
+.houseDetail .houseDetail_info {
+  padding: 10px;
+  border-bottom: 10px solid #f2f2f2;
+}
+.houseDetail .houseDetail_info .houseDetail_tags {
+  display: flex;
+  padding: 10px 0 20px 0;
+  border-bottom: 2px solid #f2f2f2;
+}
+.houseDetail .houseDetail_info .houseDetail_tags .tag {
+  padding: 0 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: skyblue;
+  color: green;
+}
+.houseDetail .houseDetail_info .houseDetail_first {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 2px solid #f2f2f2;
+  justify-content: center;
+}
+.houseDetail .houseDetail_info .houseDetail_first > div {
+  flex: 1;
+}
+.houseDetail .houseDetail_info .houseDetail_first > div > span {
+  display: block;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #A3A6A3;
+}
+.houseDetail .houseDetail_info .houseDetail_first > div .highLight {
+  font-size: 18px;
+  font-weight: bold;
+  color: #F0725B;
+}
+.houseDetail .houseDetail_info .houseDetail_second {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.houseDetail .houseDetail_info .houseDetail_second > div {
+  flex: 50%;
+  padding-left: 10px;
+}
+.houseDetail .houseDetail_info .houseDetail_second > div > span {
+  color: #A3A6A3;
+}
+.houseDetail .houseDetail_info .houseDetail_second > div .highLight {
+  color: #333;
+}
+.houseDetail .houseDetail_smallMap .community {
+  padding: 20px 10px;
+}
+.houseDetail .houseDetail_supporting {
+  padding: 80px 10px;
+}
+.houseDetail .houseDetail_supporting .supporting_body {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.houseDetail .houseDetail_supporting .supporting_body .supporting_item {
+  flex: 30%;
+}
+.houseDetail .houseDetail_footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background-color: white;
+}
+.houseDetail .houseDetail_footer span {
+  flex: 1;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-right: 1px solid #f2f2f2;
+  font-size: 14px;
+}
+.houseDetail .houseDetail_footer .booking {
+  background-color: teal;
+  border-right: none;
+  color: white;
+}

@@ -1,0 +1,20 @@
+.profile_box {
+  display: flex;
+  margin-top: 40px;
+}
+.profile_box .left {
+  flex: 70%;
+  padding: 0 20px;
+  min-height: 100px;
+}
+.profile_box .left input {
+  margin-top: 5px;
+}
+.profile_box .right {
+  flex: 30%;
+  padding-right: 10px;
+  min-height: 100px;
+}
+.profile_box .right img {
+  width: 100%;
+}

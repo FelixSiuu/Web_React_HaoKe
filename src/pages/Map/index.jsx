@@ -4,8 +4,8 @@ import MapContainer from '../../componenets/MapContainer'
 
 export default function Map() {
   return (
-    <div className="map">   
-      <MyNavBar title={'地圖找房'}/>
+    <div className="map"  style={{height: '100%'}}>   
+      <MyNavBar title={'地圖找房'} position={'fixed'}/>
       < MapContainer />
     </div>
   )

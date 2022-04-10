@@ -9,11 +9,15 @@ export default function MyNavBar(props) {
   function back(){
     navigate(-1)
   }
+
+  function getPosition(){
+    return props.position
+  }
   
   return (
-    <div>
-      {/* 需接受title props */}
-      < NavBar onBack = { back } >{props.title}</ NavBar > 
+    <div className='myNavBar'>
+      {/* 需接受title props 可選position */}
+      < NavBar onBack = { back } style={{position: getPosition() }} >{props.title}</ NavBar > 
     </div>
   )
 }

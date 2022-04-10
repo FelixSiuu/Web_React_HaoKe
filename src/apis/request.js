@@ -48,6 +48,106 @@ export const requestMapHouse = function(id){
 }
 
 // house list
-export const requestHouseList = function(cityId){
-  return axios.get(`http://localhost:8080/houses?cityId=${cityId}`)
+export const requestHouseList = function(cityId,price,rentType,end){
+  return axios.get(`http://localhost:8080/houses`,{
+    params:{
+      cityId,
+      price,
+      rentType,
+      end
+    }
+  })
+}
+
+// house detail
+export const requestHouseDetail = function(houseCode){
+  return axios.get(`http://localhost:8080/houses/${houseCode}`)
+}
+
+// login
+export const requestLogin = function(username,password){
+  return axios.post('http://localhost:8080/user/login',{
+    username,
+    password
+  })
+}
+
+// logOut
+export const requestLogOut = function(access_token){
+  return axios.post('http://localhost:8080/user/logout',{
+    params:{}
+  },{
+    headers: {
+      'Authorization': access_token
+    }
+  })
+}
+
+// get user info
+export const requestGetUserInfo = function(access_token){
+  return axios.get('http://localhost:8080/user',{
+    headers: {
+      'Authorization': access_token
+    }
+  })
+}
+
+// register
+export const requestRegister = function(user, pwd){
+  return axios.post('http://localhost:8080/user/registered',{
+    "username": user,
+    "password": pwd
+  })
+}
+
+// edit profile
+export const requestEditProfile = function(avatar,gender,nickname,phone,access_token){
+  return axios.patch('http://localhost:8080/user',{
+      avatar,
+      gender,
+      nickname,
+      phone
+  },{
+    headers: {
+      'Authorization': access_token
+    }
+  })
+}
+
+// get star list
+export const requestGetStarList = function(access_token){
+  return axios.get('http://localhost:8080/user/favorites',{
+    headers:{
+      'Authorization': access_token
+    }
+  })
+}
+
+// add star
+export const requestAddStar = function(houseCode,access_token){
+  return axios.post(`http://localhost:8080/user/favorites/${houseCode}`,{
+    params:{}
+  },{
+    headers:{
+      'Authorization': access_token
+    }
+  })
+}
+
+// is star?
+export const requestIsStar = function(houseCode,access_token){
+  return axios.get(`http://localhost:8080/user/favorites/${houseCode}`,{
+    headers:{
+      'Authorization': access_token
+    }
+  })
+}
+
+// delete star
+export const requestDeleteStar = function(houseCode,access_token){
+  return axios.delete(`http://localhost:8080/user/favorites/${houseCode}`,{
+    headers:{
+      'Authorization': access_token
+    }
+  })
 }

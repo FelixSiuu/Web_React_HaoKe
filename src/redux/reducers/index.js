@@ -1,6 +1,9 @@
 import cityInfo from './map.js'
 import area from './area.js'
 import houseList from './houseList.js'
+import houseDetail from './houseDetail.js'
+import userToken from './user.js'
+import userInfo from './userInfo.js'
 // 該文件用於匯總所有的reducers
 
 // 引入combineReducers來連結多個reducer
@@ -10,5 +13,8 @@ import {combineReducers} from 'redux'
 export default combineReducers({
   cityInfo,
   area,
-  houseList
+  houseList,
+  houseDetail,
+  userToken,
+  userInfo
 })

@@ -25,12 +25,12 @@ export default function Footer() {
       pathName:'/houselist'
 
     },
-    {
-      key: 'message',
-      title: '資訊',
-      icon: <MessageOutline fontSize={20} />,
-      pathName:'/info'
-    },
+    // {
+    //   key: 'message',
+    //   title: '資訊',
+    //   icon: <MessageOutline fontSize={20} />,
+    //   pathName:'/info'
+    // },
     {
       key: 'personalCenter',
       title: '個人中心',

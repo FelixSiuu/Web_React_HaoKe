@@ -67,7 +67,7 @@ export default connect(
         <Header></Header>
   
         {/* Swiper */}
-        < Swiper autoplay loop >
+        < Swiper Swiper autoplay loop >
           {
             swiper.map (item => ( 
               < Swiper.Item key = { item.id }>

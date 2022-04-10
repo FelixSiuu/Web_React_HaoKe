@@ -3,3 +3,7 @@
   --adm-font-family: 'MicrosoftYahei';
   --adm-border-color: #333;
 }
+.adm-button:not(.adm-button-default){
+  --background-color: teal;
+  --border-color: teal;
+}

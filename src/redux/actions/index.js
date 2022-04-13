@@ -4,6 +4,7 @@ import { GETHOUSTLIST } from '../constant.js'
 import { GETHOUSEDETAIL } from '../constant.js'
 import { GETUSERTOKEN } from '../constant.js'
 import { GETUSERINFO } from '../constant.js'
+import { GETHISTORYLIST } from '../constant.js'
 
 
 // 獲取城市label
@@ -23,3 +24,6 @@ export const getUserTokenAction = userTokenObj => {return { type: GETUSERTOKEN, 
 
 // 獲取用戶資料
 export const getUserInfoAction = userInfoObj => {return { type: GETUSERINFO, data: userInfoObj }}
+
+// 獲取歷史紀錄列表
+export const getHistoryListAction = houseObj => {return { type: GETHISTORYLIST, data: houseObj }}

@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react'
 import { useLocation, Link, useNavigate } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { Toast } from 'antd-mobile'
 // import { InfiniteScroll } from 'antd-mobile'
 import { StarFill } from 'antd-mobile-icons'
 import { getHouseListAction, getHouseDetailAction } from '../../redux/actions'
@@ -30,8 +31,16 @@ export default connect(
     // 利用用戶token獲取收藏列表
     useEffect(()=>{
       async function initStarList(){
-        const {data:{body}} = await requestGetStarList(props.userToken.token)
-        setStarList(body)
+        const {data} = await requestGetStarList(props.userToken.token)
+        if(data.status === 200){
+          setStarList(data.body)
+        }else if(data.status === 400){
+        // 防止因為長時間登錄 token失效後渲染錯誤
+          Toast.show({
+            content: 'token已過期 請重新登錄',
+            icon: 'fail'
+          })
+        }
       }
       initStarList()
     },[])
@@ -42,16 +51,6 @@ export default connect(
         case '/houselist': return '/map'
         case '/map': return '/houselist'
       }
-    }
-
-    // 搭配刷新獲取更多房屋項
-    async function pullRefreshList(){
-      // 每次刷新讓list的上限值加10
-      const newLimit = limit + 10
-      setLimit(newLimit)
-      const {data:{body:{list}}} = await requestHouseList(props.area.value,null,null,limit)
-      // 將新list結果返回redux
-      props.getHouseListAction(list)
     }
 
     // 前往房屋詳情
@@ -76,7 +75,7 @@ export default connect(
         setHasMore(false)
        }
     }
-
+    
     // 獲取className
     function getClassName(item){
       if(props.userToken.token){
@@ -89,7 +88,6 @@ export default connect(
         return false
       }
     }
-
 
     return (
       <div>

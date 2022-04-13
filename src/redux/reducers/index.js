@@ -4,6 +4,7 @@ import houseList from './houseList.js'
 import houseDetail from './houseDetail.js'
 import userToken from './user.js'
 import userInfo from './userInfo.js'
+import historyList from './historyList.js'
 // 該文件用於匯總所有的reducers
 
 // 引入combineReducers來連結多個reducer
@@ -16,5 +17,6 @@ export default combineReducers({
   houseList,
   houseDetail,
   userToken,
-  userInfo
+  userInfo,
+  historyList
 })

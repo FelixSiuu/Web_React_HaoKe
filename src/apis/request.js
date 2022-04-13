@@ -151,3 +151,48 @@ export const requestDeleteStar = function(houseCode,access_token){
     }
   })
 }
+
+// get community 
+export const requestGetCommunity = function(name,id){
+  return axios.get(`http://localhost:8080/area/community?name=${name}&id=${id}`)
+}
+
+// sell 
+export const requestSell = function(title, description, houseImg, oriented, supporting, price, roomType, size, floor, community, access_token){
+  return axios.post('http://localhost:8080/user/houses',{
+    title,
+    description,
+    houseImg,
+    oriented,
+    supporting,
+    price,
+    roomType,
+    size,
+    floor,
+    community
+  },{
+    headers:{
+      'Authorization': access_token
+    }
+  })
+}
+
+// get rent list
+export const requestRentList = function(access_token){
+  return axios.get('http://localhost:8080/user/houses',{
+    headers:{
+      Authorization: access_token
+    }
+  })
+}
+
+// refrest rent list
+export const requestRefteshList = function(houseCode,isDelete, access_token){
+  return axios.patch(`http://localhost:8080/user/houses/${houseCode}`,{
+    shelf: isDelete
+  },{
+    headers:{
+      Authorization: access_token
+    }
+  })
+}

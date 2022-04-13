@@ -7,7 +7,7 @@ import './index.css'
 export function MyText(props){
   return(
     <div className="text">
-      <input type="text" id={props.id} placeholder={props.placeholder} onChange={(e)=>{props.saveText(e.target.value)}}/>
+      <input type="text" id={props.id} placeholder={props.placeholder} onChange={(e)=>{props.saveText(e.target.value)}} onFocus={props.onFocus} onBlur={props.onBlur}/>
     </div>
   )
 }

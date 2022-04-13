@@ -44,6 +44,7 @@ export default connect(
               content: 'token已過期 請重新登錄',
               icon: 'fail'
             })
+            logOut()
           }
         }
         initUserInfo()

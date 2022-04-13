@@ -1,0 +1,100 @@
+.sell{
+  height: 100%;
+  padding: 20px 10px;
+  .sell_head{
+    margin-bottom: 10px;
+    color: teal;
+  }
+  .sell_body{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f2f2f2;
+  }
+  .title,
+  .price,
+  .size,
+  .commiunity,
+  .floor,
+  .roomType,
+  .oriented,
+  .houseImg_head{
+    position: relative;
+    display: flex;
+    line-height: 50px;
+    justify-content: space-between;
+    .item_name{
+      flex: 20%;
+    }
+    span{
+      position: absolute;
+      right: 0;
+      transform:scale(0.8)
+    }
+    .content{
+      padding: 0 2px;
+      flex: 80%;
+    }
+    .text{
+      flex: 80%;
+      >input{
+        font-size: 14px;
+      }
+    }
+  }
+  .supporting{
+    padding:0 20px;
+    .item_name{
+      margin: 10px -20px;
+    }
+  }
+  .selectCommunity{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 90%;
+    transition: all .5s;
+    background-color: white;
+    .head{
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #f2f2f2;
+      background-color: #f2f2f2;
+      .left, .right{
+        flex: 1;
+        text-align: center;
+      }
+      .close{
+        margin: 5px 55px;
+        flex: 1;
+        width: 70px;
+        height: 7px;
+        background-color: gray;
+        border-radius: 3px;
+      }
+    }
+    .list{
+      margin: 10px 20px;
+      .community_item{
+        display: block;
+        margin: 20px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #f2f2f2;
+      }
+    }
+  }
+  .desc_name{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .desc_box{
+    textarea{
+      width: 100%;
+      padding: 10px;
+      outline: none;
+    }
+  }
+}

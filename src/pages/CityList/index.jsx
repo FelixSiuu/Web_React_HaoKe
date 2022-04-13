@@ -44,7 +44,7 @@ export default connect(
       Toast.show ({
         content: `已選擇: ${e.target.innerText}`
       })
-      navigate('/home')
+      setTimeout(()=>{navigate(-1)},1000)
     }
   
     // 點擊顯示高亮

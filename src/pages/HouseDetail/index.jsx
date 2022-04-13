@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { StarFill, StarOutline, CheckOutline } from 'antd-mobile-icons'
 import { Swiper, Modal, Toast } from 'antd-mobile'
 import { Map, APILoader, Marker } from '@uiw/react-amap';
-// import { getHouseListAction, getHouseDetailAction } from '../../redux/actions'
+import { getHistoryListAction } from '../../redux/actions'
 import MyNavBar from '../../componenets/MyNavBar'
 import LoginTips from '../../componenets/LoginTips';
 import { requestAddStar, requestIsStar, requestDeleteStar } from '../../apis/request.js'
@@ -14,16 +14,25 @@ export default connect(
   state => ({
     houseDetail: state.houseDetail,
     userToken: state.userToken,
+    historyList: state.historyList
   }),
-  {}
+  {getHistoryListAction}
 )(
   function HouseDetail(props) {
     const [isStar, setIsStar] = useState()
     const {houseImg} = props.houseDetail
     const navigate = useNavigate()
 
-    // 查看是否收藏
+    // 足跡
+    const footPrint = `${new Date().toLocaleDateString()}  ${new Date().toLocaleTimeString()}`
+    const date = { date: footPrint }
+
     useEffect(()=>{
+      // 合併對象 讓每個houseDetail具有足跡的key value
+      // 添加當前房屋到歷史紀錄列表
+      props.getHistoryListAction([Object.assign(props.houseDetail,date)]) 
+
+      // 查看是否收藏
       if(props.userToken.token){
         async function initIsStar(){
           const { houseCode } = props.houseDetail

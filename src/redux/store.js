@@ -7,7 +7,6 @@ import allReducers from './reducers/index.js'
 // 引入redux-persist相關文件 以作本地緩存
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-
 const persistConfig = {
   key: 'root',
   storage: storage,
@@ -19,5 +18,4 @@ const persistedReducer = persistReducer(persistConfig, allReducers);
 const store = createStore(persistedReducer);
 export const persistor = persistStore(store);
 
-//  導出store
 export default store;

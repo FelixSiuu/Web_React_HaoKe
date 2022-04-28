@@ -50,6 +50,11 @@ export default connect(
       props.getHouseListAction(list)
     }
 
+    useEffect(()=>{
+      // 發送axios請求更新房屋列表
+      initHouseList()
+    },[props.area])
+
     return (
       <div  style={{height: '100%'}}>
         <APILoader akay="b63cd488b30aca0a7bb04eda8fd9e378">
@@ -85,8 +90,6 @@ export default connect(
                           setShow(true); 
                           // 向redux傳area對象
                           props.getAreaAction(item);  
-                          // 發送axios請求更新房屋列表
-                          initHouseList()
                         }
                       }
                       offset={()=>{new AMap.Pixel(-13, -30)}}
